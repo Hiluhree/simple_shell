@@ -53,7 +53,7 @@ Upon invocation, **myShell** receives and copies the environment of the parent p
 The home directory of the current user and the default directory argument for the **cd** builtin command.
 
 ```
-$ echo "echo $HOME" | ./myShell
+$ echo "echo $HOME" | ./myshell
 /home/vagrant
 ```
 
@@ -222,11 +222,11 @@ Example:
 $ ./myshell
 $ alias show=ls
 $ show
-AUTHORS            builtins_help_2.c  errors.c         linkedlist.c        shell.h       test
-README.md          env_builtins.c     getline.c        locate.c            shellby
-alias_builtins.c   environ.c          helper.c         main.c              split.c
-builtin.c          err_msgs1.c        helpers_2.c      man_1_simple_shell  str_funcs1.c
-builtins_help_1.c  err_msgs2.c        input_helpers.c  proc_file_comm.c    str_funcs2.c
+AUTHORS            builtinsHelp02.c  getline.c        locate_file.c     simple_shell_man
+builtin_aliases.c  env.c             helpers01.c      main.c            split.c
+builtins.c         error01.c         helpers.c        proc_file_comm.c  str_functions01.c
+builtins_env.c     error02.c         input_helpers.c  README.md         str_functions02.c
+builtinsHelp01.c   errors.c          linkedlist.c     shell.h
 ```
 
 #### exit
