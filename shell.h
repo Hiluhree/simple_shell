@@ -98,7 +98,7 @@ int myshell_env(char **args, char __attribute__((__unused__)) **front);
 int myshell_setenv(char **args, char __attribute__((__unused__)) **front);
 int myshell_unsetenv(char **args, char __attribute__((__unused__)) **front);
 int myshell_cd(char **args, char __attribute__((__unused__)) **front);
-int myshell_alias(char **args, char __attribute__((__unused__)) **front);
+int myshell_aliases(char **args, char __attribute__((__unused__)) **front);
 int myshell_help(char **args, char __attribute__((__unused__)) **front);
 
 /* Builtin Helpers */
@@ -109,10 +109,10 @@ char **_getenv(const char *var);
 /* Error Handling */
 int create_error(char **args, int err);
 char *error_env(char **args);
-char *error_1(char **args);
-char *error_2_exit(char **args);
-char *error_2_cd(char **args);
-char *error_2_syntax(char **args);
+char *error_01(char **args);
+char *error_02_exit(char **args);
+char *error_02_cd(char **args);
+char *error_02_syntax(char **args);
 char *error_126(char **args);
 char *error_127(char **args);
 

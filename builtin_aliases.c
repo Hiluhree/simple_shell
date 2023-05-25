@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int myshell_alias(char **args, char __attribute__((__unused__)) **front);
+int myshell_aliases(char **args, char __attribute__((__unused__)) **front);
 void set_aliases(char *var_name, char *value);
 void print_aliases(alias_t *alias);
 

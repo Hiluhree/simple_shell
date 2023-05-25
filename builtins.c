@@ -6,7 +6,7 @@ int myshell_help(char **args, char __attribute__((__unused__)) **front);
 
 /**
  * get_builtin - Matches a command with a corresponding
- *               shellby builtin function.
+ *               myshell builtin function.
  * @command: The command to match.
  *
  * Return: A function pointer to the corresponding builtin.
@@ -19,7 +19,7 @@ int (*get_builtin(char *command))(char **args, char **front)
 		{ "setenv", myshell_setenv },
 		{ "unsetenv", myshell_unsetenv },
 		{ "cd", myshell_cd },
-		{ "alias", myshell_alias },
+		{ "alias", myshell_aliases },
 		{ "help", myshell_help },
 		{ NULL, NULL }
 	};
