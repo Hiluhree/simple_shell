@@ -1,8 +1,8 @@
 #include "shell.h"
 
 int myshell_alias(char **args, char __attribute__((__unused__)) **front);
-void set_alias(char *var_name, char *value);
-void print_alias(alias_t *alias);
+void set_aliases(char *var_name, char *value);
+void print_aliases(alias_t *alias);
 
 /**
  * myshell_aliases - This is a builtin command that either prints all aliases,
@@ -23,7 +23,7 @@ int myshell_aliases(char **args, char __attribute__((__unused__)) **front)
 	{
 		while (temp)
 		{
-			print_alias(temp);
+			print_aliases(temp);
 			temp = temp->next;
 		}
 		return (ret);
@@ -38,7 +38,7 @@ int myshell_aliases(char **args, char __attribute__((__unused__)) **front)
 			{
 				if (_strcmp(args[i], temp->name) == 0)
 				{
-					print_alias(temp);
+					print_aliases(temp);
 					break;
 				}
 				temp = temp->next;
@@ -47,7 +47,7 @@ int myshell_aliases(char **args, char __attribute__((__unused__)) **front)
 				ret = create_error(args + i, 1);
 		}
 		else
-			set_alias(args[i], value);
+			set_aliases(args[i], value);
 	}
 	return (ret);
 }
