@@ -47,7 +47,7 @@ int myshell_aliases(char **args, char __attribute__((__unused__)) **front)
 				ret = create_error(args + i, 1);
 		}
 		else
-			set_aliases(args[i], value);
+			set_alias(args[i], value);
 	}
 	return (ret);
 }
