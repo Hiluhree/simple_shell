@@ -14,13 +14,13 @@ int myshell_help(char **args, char __attribute__((__unused__)) **front);
 int (*get_builtin(char *command))(char **args, char **front)
 {
 	builtin_t funcs[] = {
-		{ "exit", shellby_exit },
-		{ "env", shellby_env },
-		{ "setenv", shellby_setenv },
-		{ "unsetenv", shellby_unsetenv },
-		{ "cd", shellby_cd },
-		{ "alias", shellby_alias },
-		{ "help", shellby_help },
+		{ "exit", myshell_exit },
+		{ "env", myshell_env },
+		{ "setenv", myshell_setenv },
+		{ "unsetenv", myshell_unsetenv },
+		{ "cd", myshell_cd },
+		{ "alias", myshell_alias },
+		{ "help", myshell_help },
 		{ NULL, NULL }
 	};
 	int i;
