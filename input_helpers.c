@@ -163,14 +163,14 @@ int handle_args(int *exe_ret)
 	}
 	front = args;
 
-	for (index = 0; args[i]; i++)
+	for (i = 0; args[i]; i++)
 	{
 		if (_strncmp(args[i], ";", 1) == 0)
 		{
 			free(args[i]);
 			args[i] = NULL;
 			ret = call_args(args, front, exe_ret);
-			args = &args[++];
+			args = &args[i++];
 			i = 0;
 		}
 	}

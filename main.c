@@ -12,7 +12,7 @@ void signal_handler(int sig)
 	char *new_prompt = "\n$ ";
 
 	(void)sig;
-	signal(SIGINT, sig_handler);
+	signal(SIGINT, signal_handler);
 	write(STDIN_FILENO, new_prompt, 3);
 }
 
@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 	name = argv[0];
 	hist = 1;
 	aliases = NULL;
-	signal(SIGINT, sig_handler);
+	signal(SIGINT, signal_handler);
 
 	*exe_ret = 0;
 	environ = _copyenv();
